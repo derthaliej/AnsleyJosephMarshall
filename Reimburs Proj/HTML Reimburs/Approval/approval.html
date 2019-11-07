@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Approval Page</title>
+        <style>
+        body{background-color:beige}
+        body{text-align: center; color: brown}
+      
+        body{font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+        </style>
+    </head>
+    <body>
+            <h2>Welcome to the Employee Reimbursement Approval Page</h2>
+            <form onsubmit="return results();" method="post" action="mailto:admin@companysite.com">
+            <h3> Enter Name:</h3>
+            <input id="name" type="text" name="name" />
+
+            <h3> Enter Email:</h3>
+            <input id="email" type="text" name="email" />
+
+            <h3>Does this Employee have approval to be reimbursed for the event? </h3>
+
+            <input id="poll1" type="radio" name="employee_approval" value="Approved" /> Approved <br/>
+            <input id="poll2" type="radio" name="employee_approval" value="Denied" /> Denied <br/>
+            <input id="poll3" type="radio" name="employee approval" value="Need More Information" /> Need More Information <br/>
+
+            <h3>Comments for Information Needed</h3>
+
+            <textarea id="comments" name="comments" rows="6" cols="40">Information Needed.</textarea>
+
+            <br/>
+            <br/>
+
+            <input id="submit" type="submit" value="Submit"/>
+            
+            
+            
+            
+            
+            
+            
+            
+            </form>
+
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+<script>src= "approval.js" </script>
+
+
+</html>
