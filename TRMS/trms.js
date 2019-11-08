@@ -1,24 +1,15 @@
-$(document).ready(function () {
-	var previousScroll = 0;
-	$(window).scroll(function () {
-		var currentScroll = $(this).scrollTop();
-		if (currentScroll < 100) {
-			showTopNav();
-		} else if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()) {
-			if (currentScroll > previousScroll) {
-				hideNav();
-			} else {
-				showNav();
-			}
-			previousScroll = currentScroll;
-		}
-	});
+/* document.getElementById("login").addEventListener("click", function(){
+	document.querySelector(".popup").style.display = "flex";
+})
 
-	function hideNav() {
-		$(".navbar").removeClass("is-visible").addClass("is-hidden");
-	}
+document.querySelector(".close").addEventListener("click", function(){
+	document.querySelector(".popup").style.display = "none";
+}) */
 
-	function showNav() {
-		$(".navbar").removeClass("is-hidden").addClass("is-visible").addClass("scrolling");
-	}
-});
+function loginPlease() {
+	document.querySelector(".popup").style.display = "flex";
+} 
+
+function closePlease() {
+	document.querySelector(".popup").style.display = "none";
+}

@@ -17,6 +17,7 @@ body {
 header {
     padding: 10px 100px;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 section {
@@ -135,3 +136,169 @@ footer {
     font-size: 1em;
 }
 
+/*Popup login*/
+/* this is the background */
+.popup {
+background:rgba(0, 0, 0, 0.6);
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+
+display: none;
+justify-content: center;
+align-items: center;
+z-index: 10000;
+text-align:center;
+
+}
+
+/* another container */
+.popup-content {
+    height: 500px;
+    width: 375px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    text-align: center;
+    z-index: 10000;
+    
+}
+
+/* this is the actual form */
+.popup-content form {
+    mix-blend-mode: normal;
+    background-image: linear-gradient(lightblue, blueviolet);
+    border-style: hidden;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 10001;
+    opacity: 2;
+    height: 500px;
+    width: 375px;
+    position: relative;
+    justify-content: center;
+    
+    }
+    
+
+.close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 29px -4px;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+    input[type = "text"] {
+        
+        padding: 10px 20px 10px 10px;
+        font-size: 100%;
+        background-color: transparent;
+        border-bottom-color: white;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        color: white;
+    
+    }
+    
+    ::placeholder {
+        color: white;
+        text-align: left;
+    }
+    
+    input[type = "submit"] {
+        border-radius: 40px;
+        border-style: none;
+        padding: 15px 30px;
+        background-color: white;
+        font-family: 'Questrial', sans-serif;
+    }
+    
+  
+    
+    #anotherContainer {
+        text-align: center;
+        
+    }
+
+    
+
+    /* About Us */
+    .about-top {
+        background-size: cover;
+        position: relative;
+        z-index: 10;
+        box-sizing: border-box;
+    }
+
+    .about-body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Questrial', sans-serif; 
+        background-color: white;
+
+    }
+
+    .box {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        padding: 20px;
+        box-sizing: border-box;
+        background: lightcoral;
+        border-radius: 4px;
+        box-shadow: 0 5px 15px blue;
+        align-items:center;
+        justify-content: center;
+ 
+        width: 400px;
+        height: 250px;
+    }
+
+    .box > div {
+        flex-basis: 50%;
+    }
+
+    .box:hover {
+        box-shadow: 0 5px 30px blueviolet;
+    }
+
+    .box .imageBox {
+        width: 150px;
+        flex: 0 0 150px;
+    }
+   
+    .box .content {
+        padding-left: 20px;
+    }
+
+    .box .content h3 {
+        margin: 0;
+        padding-left: 0;
+        color: blueviolet;
+        font-size: 20px;
+        top: 30%
+        left: 50%;
+        position: absolute;
+    }
+
+    .box .content p {
+        margin: 0;
+        padding: 10px 0 0;
+        text-align: justify;
+    }
+
+    section.sec3 {
+        text-align: center;
+        background-size: 900px 600px;
+        background-repeat: no-repeat;
+    }
