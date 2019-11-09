@@ -228,6 +228,53 @@ BEGIN
 END; $$ 
  
 LANGUAGE 'plpgsql';   
+
+--<>-- Returns all Supervisors
+CREATE OR REPLACE FUNCTION TRMS.get_AllSup() 
+   RETURNS TABLE (
+   	 Emp_ID  INT,
+     FirstName  VARCHAR(20),
+     LastName  VARCHAR(20),
+     User_Name  VARCHAR(60),
+     passwd  VARCHAR(60),
+     Emp_Typ  INT
+) 
+AS $$
+BEGIN
+   RETURN QUERY SELECT
+      *
+   FROM
+      TRMS.Employee
+	WHERE 
+		TRMS.Employee.Emp_Typ = 2
+	OR 
+		TRMS.Employee.Emp_Typ = 3;
+END; $$ 
+ 
+LANGUAGE 'plpgsql';  
+
+--<>-- Returns a Single Row 
+
+CREATE OR REPLACE FUNCTION TRMS.get_Employee(Uname VARCHAR) 
+   RETURNS TABLE (
+   	 Emp_ID  INT,
+     FirstName  VARCHAR(20),
+     LastName  VARCHAR(20),
+     User_Name  VARCHAR(60),
+     passwd  VARCHAR(60),
+     Emp_Typ  INT
+) 
+AS $$
+BEGIN
+   RETURN QUERY SELECT
+      *
+   FROM
+      TRMS.Employee
+	WHERE 
+		TRMS.Employee.User_Name = Uname;
+END; $$ 
+ 
+LANGUAGE 'plpgsql'; 
 ----
 CREATE OR REPLACE FUNCTION TRMS.get_AllEmployeeType() 
    RETURNS TABLE (
@@ -396,7 +443,7 @@ CREATE OR REPLACE FUNCTION TRMS.AddSup(empid integer,sempid integer)
   $BODY$
       BEGIN
         INSERT INTO TRMS.Supervise(Emp_ID,SupEmp_ID)
-        VALUES(DEFAULT, typDesc);
+        VALUES(empid, sempid);
       END;
   $BODY$
   LANGUAGE 'plpgsql';	 
@@ -555,8 +602,37 @@ SELECT TRMS.AddReimbursementStatus('Email Sent');
 
 select * from TRMS.Reimbursement_Status
 
----select TRMS.AddSup(empid integer,sempid integer)
+
  ----  
+SELECT TRMS.AddEmployee('Dee', 'Jay', 'deej@gmail.com', 'pwd1', 4);
+SELECT TRMS.AddEmployee('Crytal', 'Good', 'crsyg@msn.com', 'pwd2', 2);
+SELECT TRMS.AddEmployee('Jelisa', 'Leng', 'jelg@yahoo.com', 'pwd3', 1);
+SELECT TRMS.AddEmployee('Leon', 'Reid', 'leer@gmail.com', 'pwd3', 1);
+SELECT TRMS.AddEmployee('Andre', 'DeGraw','drede@gmail.com', 'pwd4', 3);
+SELECT TRMS.AddEmployee('Dom', 'Tome', 'domt@yahoo.com', 'pwd6', 1);
+SELECT TRMS.AddEmployee('Toni', 'Kay', 'kay@yahoo.com', 'pwd7', 2);
+SELECT TRMS.AddEmployee('Jack', 'Weme', 'jweme@yahoo.com', 'pwd8', 1);
+SELECT TRMS.AddEmployee('Sherika', 'Ole', 'sole@yahoo.com', 'pwd9', 1);
+SELECT TRMS.AddEmployee('Keke', 'Stride', 'kekes@msn.com', 'pwd10', 5);
+
+select * from TRMS.get_AllEmployee();
+select * from TRMS.get_Employee('deej@gmail.com');
+---
+SELECT TRMS.AddSup(100002,100001);
+SELECT TRMS.AddSup(100003,100001);
+SELECT TRMS.AddSup(100005,100004);
+SELECT TRMS.AddSup(100007,100006);
+SELECT TRMS.AddSup(100008,100006);
+SELECT TRMS.AddSup(100001,100004);
+SELECT TRMS.AddSup(100006,100004);
+SELECT TRMS.AddSup(100000,100009);
+
+--select TRMS.UpdateRec('TRMS.Supervise', 'SupEmp_ID', 'Emp_ID', '100004', '100005');
+SELECT TRMS.get_AllSupervise();
+
+SELECT * FROM TRMS.get_AllSup();
+---
+
 select * from TRMS.get_AllEmployee();
 select * from TRMS.get_AllEmployeeType(); 
 select * from TRMS.get_AllSupervise();
