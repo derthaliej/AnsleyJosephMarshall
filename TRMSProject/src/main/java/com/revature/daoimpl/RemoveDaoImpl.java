@@ -17,7 +17,7 @@ public class RemoveDaoImpl implements RemoveDao{
 		
 		Connection conn= cf.getConnection();
 		
-		String sql = "SELECT JDBC_Bank.UpdateRec( ?, ?, ?)";
+		String sql = "SELECT TRMS.UpdateRec( ?, ?, ?)";
 		PreparedStatement ps= conn.prepareStatement(sql);
 		
 		ps.setString(1,tblNme);
@@ -35,7 +35,7 @@ public class RemoveDaoImpl implements RemoveDao{
 		Connection conn= cf.getConnection();
 
 		
-		String sql = "SELECT JDBC_Bank.deleteAllRec(?)";
+		String sql = "SELECT TRMS.deleteAllRec(?)";
 		PreparedStatement ps= conn.prepareStatement(sql);
 		
 		ps.setString(1,tblNme);

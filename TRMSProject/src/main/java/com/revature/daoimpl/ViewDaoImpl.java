@@ -25,13 +25,13 @@ public class ViewDaoImpl implements ViewDao{
 
 
 	@Override
-	public List<Employee> viewEmployee() throws SQLException {
+	public List<Employee> viewAllEmployee() throws SQLException {
 		
 		List<Employee> empList= new ArrayList<Employee>();
 		
 		Connection conn= cf.getConnection();
 		
-		String sql="select * from TRMS.get_AllEmployee() ";
+		String sql="select * from TRMS.get_AllEmployee()";
 		PreparedStatement ps= conn.prepareStatement(sql);
 		
 		ResultSet rs = ps.executeQuery();
@@ -189,6 +189,48 @@ public class ViewDaoImpl implements ViewDao{
 		}
 		return sList;
 	}
+
+	@Override
+	public Employee viewEmployee(String UsrName) throws SQLException {
+		Employee emp = null;
+		
+		Connection conn= cf.getConnection();
+		
+		String sql="select * from TRMS.get_Employee(?)";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		
+		ps.setString(1,UsrName);
+		
+		
+		ResultSet rs = ps.executeQuery();
+		
+		emp = new Employee(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6));
+		
+		return emp;
+	}
+
+	@Override
+	public List<Employee> viewAllSupervisor() throws SQLException {
+		
+		List<Employee> empList= new ArrayList<Employee>();
+		List<Employee> supList= new ArrayList<Employee>();
+		
+		empList = viewAllEmployee();
+		
+		for(Employee e: empList) {
+			if((e.getEmpTyp()==2)||(e.getEmpTyp()==3)){
+				supList.add(e);
+			}
+		}
+		
+		
+		return supList;
+	}
+	
+	
+
+
+
 	
 	
 }

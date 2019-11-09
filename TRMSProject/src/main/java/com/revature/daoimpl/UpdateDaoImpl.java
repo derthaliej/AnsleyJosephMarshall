@@ -17,7 +17,7 @@ public class UpdateDaoImpl implements UpdateDao{
 		
 		Connection conn= cf.getConnection();
 		
-		String sql = "SELECT JDBC_Bank.UpdateRec( ?, ?, ?, ?, ?)";
+		String sql = "SELECT TRMS.UpdateRec( ?, ?, ?, ?, ?)";
 		PreparedStatement ps= conn.prepareStatement(sql);
 		
 		ps.setString(1,tblNme);

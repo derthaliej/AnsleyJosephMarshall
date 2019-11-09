@@ -8,7 +8,8 @@ import com.revature.bean.*;
 
 public interface ViewDao {
 	
-	public List<Employee> viewEmployee() throws SQLException;
+	public List<Employee> viewAllEmployee() throws SQLException;
+	public Employee viewEmployee(String UsrName) throws SQLException;
 	public List<Events> viewEvents() throws SQLException;
 	public List<GradingFormat> viewGradingFormat() throws SQLException;
 	public List<Reimbursement> viewReimbursement() throws SQLException;
@@ -16,5 +17,6 @@ public interface ViewDao {
 	public List<EventType> viewEventType()throws SQLException;
 	public List<ReimbursementStatus> viewReimbursementStatus()throws SQLException;
 	public List<Supervise> viewSupervise()throws SQLException;
+	public List<Employee> viewAllSupervisor()throws SQLException;
 
 }
