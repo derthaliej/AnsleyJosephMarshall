@@ -1,0 +1,460 @@
+/*
+font-family: 'Raleway', sans-serif;
+font-family: 'Liu Jian Mao Cao', cursive;
+font-family: 'ZCOOL XiaoWei', serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Shadows Into Light Two', cursive;
+font-family: 'Questrial', sans-serif;
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial', sans-serif;
+    background: white;
+}
+
+header {
+    padding: 10px 100px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+section.sec1 {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(icons8-team-yTwXpLO5HAA-unsplash.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+section.sec2 {
+    padding: 100px;
+    box-sizing: border-box;
+    height: auto;
+    text-align: center;
+
+}
+
+section.sec2 h2 {
+    font-size: 2em;
+    margin: 0;
+    padding: 0 0 20px;
+    color: gray;
+    text-align: center;
+
+}
+
+section.sec2 p {
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+    color: blueviolet;
+
+}
+
+section.sec3 {
+    
+    background-size: cover;
+}
+
+/* menu nav */
+nav {
+    width: 100%;
+    height: 50px;
+    background: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+nav ul {
+    display: flex;
+    padding: 0 100px;
+    margin: 0;
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    color: blueviolet;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+nav ul li a.active {
+    color: lightblue;
+    
+}
+
+nav ul li a:hover {
+    
+    color: lightblue;
+}
+
+section.sec2 button {
+    border-radius: 10px;
+    border-style: none;
+    padding: 15px 30px;
+    background-color: blueviolet;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    font-size: 25px;
+    position: center;
+    text-align: center;
+}
+
+section.sec2 button:hover {
+    background-color: lightgray;
+}
+
+section.sec3 {
+    background-color: rgb(243, 242, 242);
+    width: 100%;
+    height: 400px;
+}
+
+section.sec3 inside-div{
+    text-align: center;
+    width: 75%;
+    height: 300px;
+}
+
+/* footer */
+#bottom-footer {
+    
+    z-index: 1;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    background:blueviolet;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1em;
+    
+    
+}
+#footer {
+    
+    z-index: 1;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:lightblue;
+    color: white;
+    text-transform: uppercase;
+    font-size: 3em;
+    /* make text bold */
+    left: 50%;
+}
+
+#bottom-footer .bottom-footer-content {
+    position: center;
+    padding: 50px 300px;
+    left: 25%;
+    
+}
+
+#bottom-footer .bottom-footer-content h3 {
+    position: center;
+    padding: 25px 300px 25 50px;
+    left: 25%;
+    
+}
+
+#bottom-footer .bottom-footer-content p {
+    position: center;
+    padding: 5px 0px;
+    left: 25%;
+    font-size: .75em;
+}
+
+#bottom-footer .bottom-footer-links ul {
+    list-style-type: none;
+    padding: 50px 75px;
+    position: center;
+    font-size: 1em;
+}
+
+
+
+.bottom-footer-links ul li a {
+    display: block;
+    color: white;
+    position: right;
+    text-decoration: none;
+    
+    line-height: 20px;
+    
+    
+}
+
+.bottom-footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.fixed-footer1 h5{
+    text-align: center;
+    color: gray;
+}
+
+/*Popup login*/
+/* this is the background */
+.popup {
+background:rgba(0, 0, 0, 0.6);
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+
+display: none;
+justify-content: center;
+align-items: center;
+z-index: 10000;
+text-align:center;
+
+}
+
+/* another container */
+.popup-content {
+    height: 500px;
+    width: 375px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    text-align: center;
+    z-index: 10000;
+    
+}
+
+/* this is the actual form */
+.popup-content form {
+    mix-blend-mode: normal;
+    background-image: linear-gradient(lightblue, blueviolet);
+    border-style: hidden;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 10001;
+    opacity: 2;
+    height: 500px;
+    width: 375px;
+    position: relative;
+    justify-content: center;
+    
+    }
+    
+
+.close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 29px -4px;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+    input[type = "text"] {
+        
+        padding: 10px 20px 10px 10px;
+        font-size: 100%;
+        background-color: transparent;
+        border-bottom-color: white;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        color: white;
+    
+    }
+    
+    ::placeholder {
+        color: white;
+        text-align: left;
+    }
+    
+    input[type = "submit"] {
+        border-radius: 40px;
+        border-style: none;
+        padding: 15px 30px;
+        background-color: white;
+        font-family: 'Questrial', sans-serif;
+    }
+    
+  
+    
+    #anotherContainer {
+        text-align: center;
+        
+    }
+
+    
+
+    /******************* About Us ****************/
+    /*.about-top {
+        background-size: cover;
+        position: relative;
+        z-index: 10;
+        box-sizing: border-box;
+    } */
+
+
+    section.secabout2 {
+        margin: 0;
+        padding: 0;
+        font-family: 'Questrial', sans-serif;
+        background: white;
+        
+
+    }
+
+   
+
+
+
+    section.secabout1 {
+        text-align: center;
+        background-size: 900px 600px;
+        
+        top: 40%;
+        left: 50%;
+        
+    }
+
+    section.secabout1 p {
+        text-align: justify;
+        padding: 20px 350px;
+       
+         
+    }
+
+    section.secabout1 img { 
+        top: 60%;
+        left: 50%;
+        width: 900px;
+        height:600px;
+    }   
+    
+
+     /* Certification Program */
+     .box {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        box-sizing: border-box;
+      /*  background: rgb(243, 241, 241); */
+        background-image: linear-gradient(white,rgb(243, 241, 241));
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+        display: flex;
+        transition: 0.5s;
+        
+        
+    }
+
+    .box:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .box .imageBox {
+        width: 275px;
+        flex: 0 0 250px;
+
+    }
+
+    .box .imageBox img {
+        max-width: 100%;
+    }
+
+    .box .content {
+        padding-left: 20px;
+
+    }
+
+    .box .content h3 {
+        margin: 0;
+        padding-left: 0;
+        color: blue;
+        font-size: 22px;
+    }
+
+    .box .content p {
+        margin: 0;
+        padding-left: 10px 0 0;
+        text-align: justify;
+    }
+  
+    /* Other one */
+    .box {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        box-sizing: border-box;
+      /*  background: rgb(243, 241, 241); */
+        background-image: linear-gradient(white,rgb(243, 241, 241));
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+        display: flex;
+        transition: 0.5s;
+        
+        
+    }
+
+    .box:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .box .imageBox {
+        width: 275px;
+        flex: 0 0 250px;
+
+    }
+
+    .box .imageBox img {
+        max-width: 100%;
+    }
+
+    .box .content {
+        padding-left: 20px;
+
+    }
+
+    .box .content h3 {
+        margin: 0;
+        padding-left: 0;
+        color: blue;
+        font-size: 22px;
+    }
+
+    .box .content p {
+        margin: 0;
+        padding-left: 10px 0 0;
+        text-align: justify;
+    }

@@ -38,6 +38,7 @@ section.sec2 {
     padding: 100px;
     box-sizing: border-box;
     height: auto;
+    text-align: center;
 
 }
 
@@ -63,6 +64,7 @@ section.sec3 {
     background-size: cover;
 }
 
+/* menu nav */
 nav {
     width: 100%;
     height: 50px;
@@ -88,7 +90,7 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: blue;
+    color: blueviolet;
     padding: 0 20px;
     text-decoration: none;
     text-transform: uppercase;
@@ -97,13 +99,13 @@ nav ul li a {
 }
 
 nav ul li a.active {
-    background: lightgray;
-    color: white;
+    color: lightblue;
+    
 }
 
 nav ul li a:hover {
-    background: gray;
-    color: blueviolet;
+    
+    color: lightblue;
 }
 
 section.sec2 button {
@@ -122,18 +124,122 @@ section.sec2 button:hover {
     background-color: lightgray;
 }
 
-footer {
+/*testimonial*/
+section.sec3 {
+    background-image: linear-gradient(white,rgb(243, 241, 241));
+    width: 100%;
+    height: 400px;
+}
+
+section.sec3 .inside-div {
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    left: 50%;
+    
+}
+
+section.sec3 .inside-div h4 {
+    text-align: center;
+    padding: 0 150px 0 150px;
+    font-size: 1em;
+    color: lightblue;
+    font-weight: bold;
+    
+}
+
+section.sec3 .inside-div p {
+    text-align: center;
+    padding: 0 150px 20px 150px;
+    font-size: 1.75em;
+    color: gray;
+    font-style: italic;
+}
+
+section.sec3 .inside-div img {
+    text-align: center;
+    padding: 5px 300px 5px 300px;
+    
+}
+
+/* footer */
+#bottom-footer {
     
     z-index: 1;
     width: 100%;
     height: 200px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background: lightblue;
-    color:gray;
+    background:blueviolet;
+    color: white;
     text-transform: uppercase;
     font-size: 1em;
+    
+    
+}
+#footer {
+    
+    z-index: 1;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:lightblue;
+    color: white;
+    text-transform: uppercase;
+    font-size: 3em;
+    /* make text bold */
+    left: 50%;
+}
+
+#bottom-footer .bottom-footer-content {
+    position: center;
+    padding: 50px 300px;
+    left: 25%;
+    
+}
+
+#bottom-footer .bottom-footer-content h3 {
+    position: center;
+    padding: 25px 300px 25 50px;
+    left: 25%;
+    
+}
+
+#bottom-footer .bottom-footer-content p {
+    position: center;
+    padding: 5px 0px;
+    left: 25%;
+    font-size: .75em;
+}
+
+#bottom-footer .bottom-footer-links ul {
+    list-style-type: none;
+    padding: 50px 75px;
+    position: center;
+    font-size: 1em;
+}
+
+
+
+.bottom-footer-links ul li a {
+    display: block;
+    color: white;
+    position: right;
+    text-decoration: none;
+    
+    line-height: 20px;
+    
+    
+}
+
+.bottom-footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.fixed-footer1 h5{
+    text-align: center;
+    color: gray;
 }
 
 /*Popup login*/
@@ -231,74 +337,324 @@ text-align:center;
 
     
 
-    /* About Us */
-    .about-top {
+    /******************* About Us ****************/
+    /*.about-top {
         background-size: cover;
         position: relative;
         z-index: 10;
         box-sizing: border-box;
-    }
+    } */
 
-    .about-body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Questrial', sans-serif; 
-        background-color: white;
+   
 
-    }
-
-    .box {
-        position: absolute;
-        top: 70%;
+    section.secabout1 {
+        text-align: center;
+        background-size: 900px 900px;
+        
+        top: 40%;
         left: 50%;
-        transform: translate(-50%, 50%);
+        
+    }
+
+    section.secabout1 h1 {
+        color: gray;
+        padding: 20px 350px;
+        font-size: 3em;
+       
+         
+    }
+
+    section.secabout1 p {
+        text-align: justify;
+        padding: 20px 350px;
+       
+         
+    }
+
+    section.secabout1 img { 
+        top: 60%;
+        left: 50%;
+        width: 900px;
+        height:600px;
+        box-shadow: 5px 5px 15px lightblue;
+    }   
+    
+
+     
+     
+    /* pic on left side */
+    .box {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        transform: translate(-50%, -50%);
         padding: 20px;
         box-sizing: border-box;
-        background: lightcoral;
+      /*  background: rgb(243, 241, 241); */
+        background-image: linear-gradient(white,rgb(243, 241, 241));
         border-radius: 4px;
-        box-shadow: 0 5px 15px blue;
-        align-items:center;
-        justify-content: center;
- 
-        width: 400px;
-        height: 250px;
-    }
-
-    .box > div {
-        flex-basis: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+        display: flex;
+        transition: 0.5s;
+        
+        
     }
 
     .box:hover {
-        box-shadow: 0 5px 30px blueviolet;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
     }
 
     .box .imageBox {
-        width: 150px;
-        flex: 0 0 150px;
+        width: 275px;
+        flex: 0 0 250px;
+
     }
-   
+
+    .box .imageBox img {
+        max-width: 100%;
+    }
+
     .box .content {
         padding-left: 20px;
+
     }
 
     .box .content h3 {
         margin: 0;
         padding-left: 0;
         color: blueviolet;
-        font-size: 20px;
-        top: 30%
-        left: 50%;
-        position: absolute;
+        font-size: 22px;
     }
 
     .box .content p {
         margin: 0;
-        padding: 10px 0 0;
+        padding-left: 10px 0 0;
         text-align: justify;
+        color: gray;
     }
 
-    section.sec3 {
+    /* University Courses */
+    .about-body .secabout2 {
         text-align: center;
-        background-size: 900px 600px;
-        background-repeat: no-repeat;
     }
+
+    section.secabout2 {
+        margin: 0;
+        padding: 400px 100px 0 0;
+        top: 70%;
+        font-family: 'Questrial', sans-serif;
+        background: white;
+        width: 100%;
+        height: 200px;
+        left: 50%;
+    }
+
+
+/* Seminars */
+    .about-body .secabout3 {
+        text-align: center;
+    }
+
+    
+    section.secabout3 {
+        margin: 0;
+        padding: 200px 100px 0 0;
+        top: 70%;
+        font-family: 'Questrial', sans-serif;
+        background: white;
+        width: 100%;
+        height: 200px;
+        left: 50%;
+    }
+
+    /* Certification prep class */
+    .about-body .secabout4 {
+        text-align: center;
+    }
+
+    section.secabout4 {
+        margin: 0;
+        padding: 200px 100px 0 0;
+        top: 70%;
+        font-family: 'Questrial', sans-serif;
+        background: white;
+        width: 100%;
+        height: 200px;
+        left: 50%;
+    }
+
+    /* Certifications */
+    .about-body .secabout5 {
+        text-align: center;
+    }
+
+    section.secabout5 {
+        margin: 0;
+        padding: 200px 100px 0 0;
+        top: 70%;
+        font-family: 'Questrial', sans-serif;
+        background: white;
+        width: 100%;
+        height: 200px;
+        left: 50%;
+    }
+
+    /* Technical Training */
+    .about-body .secabout6 {
+        text-align: center;
+    }
+
+    section.secabout6 {
+        margin: 0;
+        padding: 200px 100px 0 0;
+        top: 70%;
+        font-family: 'Questrial', sans-serif;
+        background: white;
+        width: 100%;
+        height: 200px;
+        left: 50%;
+    }
+
+    /* Other */
+    .about-body .secabout7 {
+        text-align: center;
+    }
+
+    section.secabout7 {
+        margin: 0;
+        padding: 200px 100px 200px 0;
+        top: 70%;
+        font-family: 'Questrial', sans-serif;
+        background: white;
+        width: 100%;
+        height: 200px;
+        left: 50%;
+    }
+
+    
+    /*pic on right side*/
+    .box-two {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        box-sizing: border-box;
+      /*  background: rgb(243, 241, 241); */
+        background-image: linear-gradient(white,rgb(243, 241, 241));
+        border-radius: 4px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+        display: flex;
+        transition: 0.5s;
+        
+        
+    }
+
+    .box-two:hover {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .box-two .imageBox-two {
+        width: 275px;
+        flex: 0 0 250px;
+
+    }
+
+    .box-two .imageBox-two img {
+        max-width: 100%;
+    }
+
+    .box-two .content-two {
+        padding-right: 20px;
+
+    }
+
+    .box-two .content-two h3 {
+        margin: 0;
+        padding-right: 0;
+        color: lightblue;
+        font-size: 22px;
+    }
+
+    .box-two .content-two p {
+        margin: 0;
+        padding-right: 10px 0 0;
+        text-align: justify;
+        color: gray;
+    }
+
+    /* Applications Table */
+    .edashboard-body {
+        text-align: center;
+        left: 50%;
+        background-color: blueviolet;
+
+      }
+
+      .table-stuff {
+          text-align: center;
+          margin: 100px 300px 50px 300px;
+      }
+      
+      .content-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px gray;
+        text-align: center;
+        position: center;
+        float: center;
+        background-color: white;
+      }
+      
+      .content-table thead tr {
+        background-color: gray;
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+      }
+      
+      .content-table th,
+      .content-table td {
+        padding: 12px 15px;
+      }
+      
+      .content-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+      }
+      
+      .content-table tbody tr:nth-of-type(even) {
+        background-color: #ebebeb;
+      }
+      
+      .content-table tbody tr:last-of-type {
+        border-bottom: 2px solid lightblue;
+      }
+      
+      .content-table tbody tr.active-row {
+        font-weight: bold;
+        color: gray;
+      }
+
+      
+.edashboard-body button {
+    border-radius: 10px;
+    border-style: none;
+    padding: 15px 30px;
+    background-color: lightblue;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    font-size: 0.9em;
+    position: center;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.edashboard-body button:hover {
+    background-color: blueviolet;
+}

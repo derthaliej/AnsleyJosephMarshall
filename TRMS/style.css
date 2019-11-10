@@ -1,0 +1,378 @@
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Questrial', sans-serif;
+    color: rgb(255, 248, 238);
+    background-color: rgb(220, 225, 230);
+    overflow-x: scroll;
+    background-image: "https://previews.123rf.com/images/things/things1610/things161000004/66867498-city-skyline-in-grey-colors-buildings-silhouette-cityscape-big-city-streets-minimalistic-style-vecto.jpg";
+    background-size: cover;
+    background-blend-mode: overlay;
+    display: block;
+    z-index: 5;
+    position: fixed;
+    margin: 0px;
+    padding: 0px;
+} 
+
+
+/*
+font-family: 'Raleway', sans-serif;
+font-family: 'Liu Jian Mao Cao', cursive;
+font-family: 'ZCOOL XiaoWei', serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Shadows Into Light Two', cursive;
+font-family: 'Questrial', sans-serif;
+*/
+
+
+/*********************Home page*********************/
+
+
+  /*Navigation Bar*/
+  nav {
+    height: 10vh;
+    background-color: white;
+    z-index:15;
+    top:0;
+    left:0;
+    position:fixed;
+    width: 100%;
+
+
+  }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    
+    width: 50%;
+    height: 100%;
+    
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+
+}
+
+.nav-links li a {
+    color: blueviolet;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+
+.nav-links li a:hover {
+    color: lightgray;
+}
+
+.landing {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing h1 {
+    margin: 100px;
+    font-size: 50px;
+    color: blue;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background: red;
+        margin: 5px;
+        
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .nav-bar {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: lightcoral;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle (100px at 90% -10%);
+        -webkit-clip-path: circle (100px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open {
+        clip-path: circle (1000px at 90% 10%);
+        -webkit-clip-path: circle (1000px at 90% -10%);
+        pointer-events: all;
+    }
+     
+    .landing {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links li a {
+        font-size: 25px;
+    }
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.8s;
+    }
+
+    li.fade {
+        opacity: 1;
+    }
+
+    }
+
+
+/**/
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .slideShow {
+    display: none;
+    
+  }
+  
+  /* actual images */
+  .slideshow-image {
+    width:1024px;
+    height:768px;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 10px 10px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+/*Center text*/
+.home-page-center-text {
+    left: 0;
+    line-height: 50px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    color: blue;
+    font-family: 'Questrial', sans-serif;
+
+    
+}
+
+/**/
+.learn-more-home {
+    border-radius: 10px;
+    border-style: none;
+    padding: 15px 30px;
+    background-color: blueviolet;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    font-size: 25px;
+    position: center;
+    text-align: center;
+}
+
+.learn-more-home:hover {
+    background-color: lightgray;
+}
+
+
+/*Login pop-up */
+form {
+mix-blend-mode: normal;
+background-image: linear-gradient(lightblue, blueviolet);
+border-style: hidden;
+border-radius: 20px;
+z-index: 10;
+
+opacity: 2;
+
+
+}
+
+input[type = "text"] {
+    
+    padding: 10px 20px 10px 10px;
+    font-size: 100%;
+    background-color: transparent;
+    border-bottom-color: white;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    color: white;
+
+}
+
+::placeholder {
+    color: white;
+    text-align: left;
+}
+
+input[type = "submit"] {
+    border-radius: 40px;
+    border-style: none;
+    padding: 15px 30px;
+    background-color: white;
+    font-family: 'Questrial', sans-serif;
+}
+
+#container {
+    position: fixed;
+    width: 400px;
+    height: 800px;
+    top: 35%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -170px;
+    text-align: center;
+
+}
+
+#anotherContainer {
+    text-align: center;
+    
+}
+
+#logo {
+    width: 300px;
+    height: 300px;
+}
+
+  /*set the Modal background*/ 
+  .modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding-top: 60px; 
+} 
+
+/*style the model content box*/ 
+.modal-content { 
+    background-color: #fefefe; 
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888; 
+    width: 80%; 
+} 
+
+  

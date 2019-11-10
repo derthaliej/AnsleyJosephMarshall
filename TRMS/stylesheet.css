@@ -1,0 +1,181 @@
+
+
+/*
+font-family: 'Raleway', sans-serif;
+font-family: 'Liu Jian Mao Cao', cursive;
+font-family: 'ZCOOL XiaoWei', serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Shadows Into Light Two', cursive;
+font-family: 'Questrial', sans-serif;
+*/
+
+
+/* Cool Navigation */
+nav {
+    transition: background 0.4s ease-in-out;
+    background:blue;
+    font-family: 'Questrial', sans-serif;
+    color: red;
+    
+  }
+
+  .is-hidden {
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.2s;
+  }
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+  
+  .navbar-hide {
+    pointer-events: none;
+    opacity: 0;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  
+  section {
+    padding-top: 8rem;
+    
+  }
+  
+  h1 {
+    
+    color: black;
+  }
+  
+  .col-centered {
+    margin: 0 auto;
+  }
+  
+  body {
+    background: white;
+    color: gray;
+  }
+  
+  .menu-hamburger {
+    bottom: calc(50% - 10px);
+    right: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 575.98px) {
+    .menu-hamburger {
+      bottom: calc(50% - 12px);
+    }
+  }
+  
+  .menu-hamburger span {
+    width: 30px;
+    height: 4px;
+    display: block;
+    background: gray;
+    margin-bottom: 4px;
+    
+  }
+  
+  .menu-hamburger span:last-of-type {
+    margin-bottom: 0;
+   
+  }
+  
+  nav .navbar-header img {
+    max-width: 110px;
+  }
+  
+  @media (max-width: 767.98px) {
+    nav.h-navbar {
+      max-height: 90px;
+    }
+  
+    nav .navbar-header img {
+      max-width: 90px;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    nav.h-navbar {
+      max-height: 70px;
+    }
+  
+    nav .navbar-header img {
+      max-width: 70px;
+    }
+  }
+  
+  nav .navbar-nav li.navbar-item {
+    line-height: 110px;
+    margin-left: -5px;
+    
+  }
+  
+  nav .navbar-nav li.navbar-item a {
+    padding: 0 20px;
+    
+  }
+  
+  @media (max-width: 991.98px) {
+    nav .navbar-nav li.navbar-item a {
+      padding: 0 10px;
+    }
+  
+    .row {
+      width: 100%;
+    }
+  }
+  
+  nav .navbar-nav li ul li a p {
+    line-height: 1.4;
+    
+  }
+
+  /* modified styles in bootstrap for nav bar */
+  .img-fluid  {
+
+    width: 150px;
+    height: 150px;
+    
+
+  }
+
+  .learn-more-home {
+    border-radius: 10px;
+    border-style: none;
+    padding: 15px 30px;
+    background-color: lightcoral;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    font-size: 25px;
+    position: center;
+    text-align: center;
+}
+
+.learn-more-home:hover {
+    background-color: lightgray;
+}
+
+.navbar-item {
+    color:lightcoral;
+}
+
+.text-center {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5)), url("icons8-team-yTwXpLO5HAA-unsplash.jpg");
+    height: 100%;
+    margin: 0;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.d-block {
+  color: orange;
+}
