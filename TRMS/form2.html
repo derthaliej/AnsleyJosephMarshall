@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Employee Tuition Reimbursement Form</title>
+        <style>
+                body{text-align: center; }
+         </style>
+    </head>
+         <body>
+             <div>
+                 <h1>Employee Tuition Reimbursement Form</h1>
+             </div>
+             <form>
+                    <div class="form-row">
+                            <div class="container">
+                                    <div class="row">
+                                        <div class='col-sm-2'>
+                                            <div class="form-group">
+                                                <div class='input-group date' id='datetimepicker5'>
+                                                    <input type='text' class="form-control" id="currentDate" />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                            <div class="col-md-4 mb-3">
+                              <label for="validationDefault02">First name</label>
+                              <input type="text" class="form-control" id="validationDefault02" placeholder="First name" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                              <label for="validationDefault02">Last name</label>
+                              <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" required>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="validationDefault02">Employee ID</label>
+                                <input type="number"
+                                " class="form-control" id="validationDefault02" placeholder="Employee ID" required>
+                              </div>
+                      <div class="form-group col-md-4">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      </div>
+                          <div class="form-group col-md-4">
+                      <label for="inputAddress">Address</label>
+                      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-4">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="City" required>
+                      </div>
+                      <div class="col-md-2 mb-3">
+                            <label for="validationDefault04">State</label>
+                            <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
+                          </div>
+                      <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control" id="inputZip" placeholder="Zip" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                            <label for="inputEventDescription">Event Description</label>
+                            <input type="text" class="form-control" id="inputEventDescription" placeholder="Event Description">
+                          </div>
+                                  <div class="form-group col-md-4">
+                                        <label for="inputEventType">Event Type</label>
+                                        <select id="inputEventType" class="form-control">
+                                          <option selected>Choose...</option>
+                                          <option>...</option>
+                                        </select>
+                                      </div>
+                          <div class="form-group col-md-6">
+                                <label for="inputEventGrading">Event Graded or Certificate</label>
+                                <input type="text" class="form-control" id="inputEventGrading" placeholder="Event Graded or Cert">
+                              </div>
+                        <div class="form-row">
+                                <div class="form-group col-md-12">
+                                        <label for="inputDateOfEvent">Date of Event</label>
+                                        <input type="date" class="form-control" id="inputDateOfEvent" placeholder="Date of Event" >
+                                      </div>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                            <label for="inputTime">Time of Event</label>
+                                            <input type="time" class="form-control" id="inputTime" placeholder="Time of Event">
+                                          </div>
+                                <div class="col-md-4 mb-3">
+                                  <label for="validationDefault03">City</label>
+                                  <input type="text" class="form-control" id="validationDefault03" placeholder="City of Event" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                  <label for="validationDefault04">State</label>
+                                  <input type="text" class="form-control" id="validationDefault04" placeholder="State of Event" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                  <label for="validationDefault05">Zip</label>
+                                  <input type="text" class="form-control" id="validationDefault05" placeholder="Zip of Event" required>
+                                </div>
+                              <div class="form-group col-md-6">
+                                    <label for="inputWorkJustification4">Work Justification</label>
+                                    <input type="text" class="form-control" id="inputWorkJustification4" placeholder="Work Justification">
+                                  </div>
+                              <div class="form-group col-md-4">
+                                        <label for="inputCost4">Cost</label>
+                                        <input type="number" class="form-control" id="inputCost4" placeholder="Cost">
+                              </div>
+                    <div class="form-group" >
+                            <label for="exampleFormControlFile3">Attach Supporting Documents</label>
+                            <input type="file" class="form-control-file" id="exampleFormControlFile3">
+                          </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                  <script src="form.js"></script>
+                  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+         </body>
+</html>
+
+

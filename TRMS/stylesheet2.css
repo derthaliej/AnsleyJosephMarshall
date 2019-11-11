@@ -658,3 +658,39 @@ text-align:center;
 .edashboard-body button:hover {
     background-color: blueviolet;
 }
+
+/*  */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+    margin: 100px 300px;
+    text-align: center;
+    
+    background-color: white;
+    
+  }
+  
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+  
+  .card h3 {
+      color: blueviolet;
+
+  }
+
+  .card p {
+      color: gray;
+      padding: 10px; 
+  }
+  
+  
+  /* apply button */
+  .apply-button .emp-apply {
+    font-size: 1.75em;
+  }
+
+  .apply-button .emp-apply:hover {
+    background-color: lightgray;
+}
